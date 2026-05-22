@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Job</title>
+</head>
+<body>
+
+<h2>Add Job</h2>
+
+<form action="/save" method="post" th:object="${job}">
+
+    Title: <input type="text" th:field="*{title}" /><br><br>
+
+    Company: <input type="text" th:field="*{company}" /><br><br>
+
+    Location: <input type="text" th:field="*{location}" /><br><br>
+
+    Description: <input type="text" th:field="*{description}" /><br><br>
+
+    <button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>
